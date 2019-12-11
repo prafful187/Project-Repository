@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A website about Jaipur tourism">
+    <meta name="keywords" content="Jaipur, jaipur tourism, pink city, pink city tourist, visit jaipur, rajasthan">
+    <meta name="author" content="Prafful Jain">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Jaipur Tourism| Rajasthan</title>
     <style>
         ul {
@@ -42,7 +46,7 @@
         }
         
         body {
-            background-color: pink;
+            background-color: rgb(248, 211, 217);
         }
         
         #map {
@@ -54,7 +58,33 @@
             margin: 20px auto auto 20px;
             text-align: center;
         }
+        
+        h1 {
+            color: maroon;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: darkmagenta;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-decoration: underline;
+        }
     </style>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#slider").slider();
+        });
+    </script>
 </head>
 
 <body>
@@ -75,13 +105,13 @@
             <a href="stay.html" target="_blank">Where To Stay</a>
         </li>
         <li>
-            <a href="nightlife.html" target="_blank">Night Life</a>
-        </li>
-        <li>
             <a href="rajasthan.html" target="_blank">Explore Rajasthan</a>
         </li>
         <li>
             <a href="sitemap.html" target="_blank">Site Map</a>
+        </li>
+        <li>
+            <a href="Credits.html" target="_blank">Credits</a>
         </li>
         <li id="lastbutton">
             <a href="contact.html" target="_blank">Contact Us</a>
@@ -90,7 +120,7 @@
 
     <!-- _______________Individual Page Content___________________ -->
     <h1>Click on a District to find out more!</h1>
-    <h2>options include, jaipur, kota, ajmer, udaipur, jaisalmer,and bikaner</h2>
+    <h2>Options include, Jaipur, Kota, Ajmer, Udaipur, Jaisalmer, and Bikaner</h2>
 
     <map name="Rajasthanmap">
      <area target="_blank" alt="Udaipur" title="Udaipur" href="http://www.tourism.rajasthan.gov.in/udaipur.html"; coords="384,581,53" shape="circle">
@@ -102,6 +132,17 @@
      <area target="" alt="Jaipur" title="Jaipur" href="http://www.tourism.rajasthan.gov.in/jaipur.html"; coords="561,334,56" shape="circle">
      <img id="map" src="TP_Images/rajasthan_map.gif"  usemap="#Rajasthanmap" alt="Rajasthan Map" title="Clickable map">
     </map>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <h1>How excited are you to explore rajasthan?</h1>
+    <h2>Use the slider below to select</h2>
+    <div id="slider"></div>
+    <br>
+    <br>
+    <br>
 
 
 </body>

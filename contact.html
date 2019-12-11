@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A website about Jaipur tourism">
+    <meta name="keywords" content="Jaipur, jaipur tourism, pink city, pink city tourist, visit jaipur, rajasthan">
+    <meta name="author" content="Prafful Jain">
     <title>Jaipur Tourism| Contact Us</title>
     <style>
         ul {
@@ -42,7 +45,7 @@
         }
         
         body {
-            background-color: pink;
+            background-color: rgb(248, 211, 217);
         }
         
         table {
@@ -57,6 +60,29 @@
             text-align: center;
         }
     </style>
+
+    <script>
+        function display() {
+
+            let myForm = document.getElementById("form1");
+            let fullName = myForm.fname.value;
+            let age = myForm.age.value;
+            let noAge = myForm.noAge;
+            let contact = myForm.Contactreason.value;
+            let mail = myForm.Email.value;
+            let pnumber = myForm.phone.value;
+
+            if (fullName == "" || age == "" || contact == "" || mail == "") {
+                alert("Please Finish the Form")
+            } else if (isNaN(age)) {
+                alert("Please Enter a Valid Age")
+            } else if (isNaN(pnumber)) {
+                alert("Please Enter a Valid Phone Number")
+            }
+            return false;
+
+        }
+    </script>
 </head>
 
 <body>
@@ -77,13 +103,13 @@
             <a href="stay.html" target="_blank">Where To Stay</a>
         </li>
         <li>
-            <a href="nightlife.html" target="_blank">Night Life</a>
-        </li>
-        <li>
             <a href="rajasthan.html" target="_blank">Explore Rajasthan</a>
         </li>
         <li>
             <a href="sitemap.html" target="_blank">Site Map</a>
+        </li>
+        <li>
+            <a href="Credits.html" target="_blank">Credits</a>
         </li>
         <li id="lastbutton">
             <a href="contact.html" target="_blank">Contact Us</a>
@@ -92,25 +118,21 @@
 
     <!-- _______________Individual Page Content___________________ -->
 
-    <!-- Image carousel goes here -->
-
     <!-- ______________Form________________ -->
     <h1>Contact Us</h1>
     <div>
-        <form action="mailto:pjain4@babson.edu" method="POST">
+        <form action="mailto:pjain4@babson.edu" method="POST" id="form1">
             <table>
                 <th colspan="2">Feedback Form</th>
                 <tr>
-                    <td>First Name:
-                        <input type="text" name="lname" maxlength="10" size="15" placeholder="Please Enter Your First Name" />
+                    <td>Full Name:
+                        <input type="text" name="fname" maxlength="10" size="15" placeholder="Please Enter Your Full Name" />
                     </td>
-
                     <td>
-                        Last Name:
-                        <input type="text" name="fname" maxlength="10" size="15" placeholder="Please Enter Your Last Name" />
+                        Age:
+                        <input type="text" name="age" maxlength="10" size="15" placeholder="Please Enter Your Age" />
                     </td>
                 </tr>
-
                 <tr>
                     <td>
                         Email:
@@ -121,16 +143,7 @@
                         Contact No.:
                         <input type="number" name="phone" maxlength="10" size="15" placeholder="Please Enter Your Phone Number " />
                     </td>
-
-                    <!-- <td>
-                        Gender: Male
-                        <input type="radio" name="gender" value="m" /> Female
-                        <input type="radio" name="gender" value="f" /> Choose Not to Identify
-                        <input type="radio" name="gender" value="other" />
-                    </td> -->
                 </tr>
-
-
                 <tr>
                     <td colspan="2">
                         What Are You Contacting Us About?
@@ -147,7 +160,15 @@
                         Please Explain Further:
                         <textarea name="Comments" cols="50" rows="5"></textarea>
                     </td>
+                </tr>
 
+                <tr>
+                    <td>
+                        <input name="submit" type="submit" value="Submit" onclick="return display()" />
+                    </td>
+                    <td>
+                        <input name="reset" type="reset" value="Clear" />
+                    </td>
                 </tr>
             </table>
 

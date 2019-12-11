@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A website about Jaipur tourism">
+    <meta name="keywords" content="Jaipur, jaipur tourism, pink city, pink city tourist, visit jaipur, rajasthan">
+    <meta name="author" content="Prafful Jain">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Jaipur Tourism| Homepage</title>
     <style>
         ul {
@@ -37,12 +41,13 @@
             border-left: 1px solid pink;
         }
         
-        #logo {
+        img#logo {
             width: 200px;
+            height: auto;
         }
         
         body {
-            background-color: pink;
+            background-color: rgb(248, 211, 217);
         }
         
         video {
@@ -67,7 +72,88 @@
             font-style: italic;
             text-align: center;
         }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        /* Create two equal columns that sits next to each other */
+        
+        .column {
+            flex: 50%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 10px;
+            margin-right: 22px;
+            margin-left: 22px;
+            margin-bottom: 10px;
+            vertical-align: middle;
+        }
+        
+        img {
+            height: 200px;
+            width: 250px;
+            border: 4px solid cornsilk;
+        }
+        
+        h1 {
+            color: maroon;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: darkmagenta;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        
+        h3 {
+            text-align: justify;
+            color: rgb(36, 36, 36));
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        /* div#vidbackground {
+            background-image: url(TP_Images/backgroundindex.jpg);
+        } */
     </style>
+
+    <script>
+        function enlargeImage(imageId) {
+            let i = document.getElementById(imageId);
+            i.style.borderColor = "blueviolet";
+            i.style.width = "260px";
+            i.style.height = "210px";
+
+        }
+
+        function shortenImage(imageId) {
+            let i = document.getElementById(imageId);
+            i.style.borderColor = "cornsilk";
+            i.style.width = "250px";
+            i.style.height = "200px";
+
+
+
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#resizable").resizable();
+        });
+    </script>
 </head>
 
 <body>
@@ -88,13 +174,13 @@
             <a href="stay.html" target="_blank">Where To Stay</a>
         </li>
         <li>
-            <a href="nightlife.html" target="_blank">Night Life</a>
-        </li>
-        <li>
             <a href="rajasthan.html" target="_blank">Explore Rajasthan</a>
         </li>
         <li>
             <a href="sitemap.html" target="_blank">Site Map</a>
+        </li>
+        <li>
+            <a href="Credits.html" target="_blank">Credits</a>
         </li>
         <li id="lastbutton">
             <a href="contact.html" target="_blank">Contact Us</a>
@@ -103,14 +189,55 @@
 
     <!-- _______________Individual Page Content___________________ -->
 
-    <!-- <iframe width="600" height="400" src="https://www.youtube.com/watch?v=sWMnfd4Cras?autoplay=1" frameborder="0"></iframe> -->
+
+
     <h1 id="cap">Experience Jaipur Like Never Before!</h1>
 
     <p>
-        <video autoplay controls muted>
+        <video id="resizable" class="ui-widget-content" autoplay controls muted>
         <source src="TP_Images/jaipur short vid.mp4" type="video/mp4" >
     </video>
     </p>
+    <br>
+    <br>
+
+    <!-- Image Grid -->
+
+    <h1>Image Gallery</h1>
+
+    <div id="vidbackground">
+
+        <div class="row">
+            <div class="column">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="1" src="TP_Images/grid1.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="2" src="TP_Images/grid2.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="3" src="TP_Images/grid3.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="4" src="TP_Images/grid4.jpg">
+
+
+            </div>
+            <div class="column">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="5" src="TP_Images/grid5.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="6" src="TP_Images/grid6.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="7" src="TP_Images/grid7.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="8" src="TP_Images/grid8.jpg">
+            </div>
+            <div class="column">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="9" src="TP_Images/grid9.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="10" src="TP_Images/grid10.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="11" src="TP_Images/grid11.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="12" src="TP_Images/grid12.jpg">
+            </div>
+            <div class="column">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="13" src="TP_Images/grid13.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="14" src="TP_Images/grid14.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="15" src="TP_Images/grid15.jpg">
+                <img onmouseover="enlargeImage(this.id)" onmouseout="shortenImage(this.id)" id="16" src="TP_Images/grid16.jpg">
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 
